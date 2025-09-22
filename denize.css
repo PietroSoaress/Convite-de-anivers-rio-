@@ -1,0 +1,190 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FDFBF8;
+    color: #5D4037;
+    margin: 0;
+    padding: 2rem 1rem;
+    overflow-x: hidden;
+    background-image: url('assets/background.jpg'); /* Adicione uma imagem de textura de papel aqui */
+    background-size: cover;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+header p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #6A3F5E;
+    font-weight: 500;
+}
+
+.name {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    color: #8C3A5B;
+    margin: 1rem 0;
+}
+
+.divider {
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #D4AF37, transparent);
+    margin: 2rem auto;
+    border: 0;
+}
+
+.details {
+    font-size: 1.5rem;
+    color: #8C3A5B;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.address {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #6A3F5E;
+}
+
+#rsvp {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #D4AF37;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    color: #8C3A5B;
+    font-size: 2.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #D4AF37;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
+button {
+    background-color: #8C3A5B;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-bottom: 2px solid #D4AF37;
+}
+
+button:hover {
+    background-color: #6A3F5E;
+}
+
+#form-message {
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+/* Animação das Flores */
+.flower-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.flower {
+    position: absolute;
+    bottom: -100px;
+    width: 80px;
+    height: 80px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+}
+
+/* ============================================== */
+/* ESTILOS PARA A LISTA DE CONVIDADOS CONFIRMADOS */
+/* ============================================== */
+
+/* A caixa que envolve toda a seção da lista */
+#guest-list-section {
+    margin-top: 50px; /* Adiciona um espaço acima da lista */
+    margin-bottom: 50px; /* Adiciona um espaço abaixo da lista */
+    text-align: center;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.85); /* Fundo branco semi-transparente */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar */
+}
+
+/* O título "Convidados Confirmados" */
+#guest-list-section h2 {
+    font-family: 'Playfair Display', serif; /* Mesma fonte do nome "Denize" */
+    font-size: 2.2em;
+    font-weight: 700;
+    color: #8C3A5B; /* Cor rosa/vinho do seu site */
+    margin-bottom: 25px;
+    border-bottom: 2px solid #ebdee3; /* Linha sutil abaixo do título */
+    padding-bottom: 15px;
+}
+
+/* A lista em si (o <ul>) */
+#guest-list {
+    list-style-type: none; /* Remove as bolinhas padrão da lista */
+    padding: 0;
+    margin: 0 auto; /* Centraliza a lista na seção */
+    max-width: 400px; /* Largura máxima da lista */
+    max-height: 350px; /* Altura máxima antes de aparecer a barra de rolagem */
+    overflow-y: auto;  /* Adiciona a barra de rolagem vertical SE necessário */
+}
+
+/* Cada nome na lista (o <li>) */
+#guest-list li {
+    font-family: 'Poppins', sans-serif; /* Mesma fonte do texto geral */
+    font-size: 1.1em;
+    color: #000000; /* Cor de texto escura para boa legibilidade */
+    padding: 12px 10px;
+    border-bottom: 1px solid #ebdee3; /* Linha separadora bem clara entre os nomes */
+    text-align: left; /* Alinha os nomes à esquerda dentro da lista */
+}
+
+/* Remove a linha separadora do último nome da lista */
+#guest-list li:last-child {
+    border-bottom: none;
+}

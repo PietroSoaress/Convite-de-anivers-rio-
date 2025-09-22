@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação de Presença - 50 Anos Denize</title>
+    <link rel="stylesheet" href="denize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="flower-container"></div>
+
+    <div class="container">
+        <header>
+            <p>CELEBRE COMIGO MEIO SÉCULO DE<br>HISTÓRIAS, CONQUISTAS E ALEGRIAS.</p>
+            <p>SUA PRESENÇA TORNARÁ<br>ESTE MOMENTO AINDA MAIS ESPECIAL.</p>
+        </header>
+
+        <main>
+            <div class="name">Denize</div>
+            <div class="divider"></div>
+            <div class="details">
+                <span>OUTUBRO</span> &bull; <span>18</span> &bull; <span>14H30</span>
+            </div>
+            <div class="divider"></div>
+            <div class="address">
+                <p>RUA JEROAQUARA, Nº406 - VILA ROMANA</p>
+                <p>SALÃO DE FESTAS</p>
+            </div>
+        </main>
+
+        <section id="rsvp">
+            <h2>Confirme sua Presença</h2>
+            <form id="rsvp-form">
+                <div class="form-group">
+                    <label for="name">Seu nome completo:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label>Você irá ao evento?</label>
+                    <div class="radio-group">
+                        <input type="radio" id="yes" name="attendance" value="true" checked>
+                        <label for="yes">Sim, estarei lá!</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="no" name="attendance" value="false">
+                        <label for="no">Não poderei comparecer.</label>
+                    </div>
+                </div>
+                <button type="submit">Enviar Confirmação</button>
+            </form>
+            <p id="form-message"></p>
+        </section>
+                <!-- INÍCIO DO CÓDIGO PARA COLAR -->
+        <section id="guest-list-section">
+            <h2>Convidados Confirmados</h2>
+            <ul id="guest-list">
+                <!-- O JavaScript vai inserir os nomes aqui -->
+            </ul>
+        </section>
+        <!-- FIM DO CÓDIGO PARA COLAR -->
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="denize.js"></script>
+</body>
+</html>

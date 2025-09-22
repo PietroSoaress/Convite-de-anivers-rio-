@@ -3,11 +3,11 @@ const { Pool } = require('pg'); // Pacote novo para PostgreSQL
 const path = require('path');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Conecta ao banco de dados permanente usando a URL do Render
 const pool = new Pool({
-  connectionString: 'postgresql://confirmacaoaniversario_user:TCIgnQUYmAP7R8xwSMleCu6BsP49F366@dpg-d35cl963jp1c73eumibg-a/confirmacaoaniversario', // COLE A URL AQUI
+  connectionString: process.env.DATABASE_URL, // <-- A MUDANÇA É AQUI
   ssl: {
     rejectUnauthorized: false
   }

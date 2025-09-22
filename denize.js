@@ -11,37 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // =================================================================
     // 1. NOVA FUNÇÃO: CARREGAR E EXIBIR A LISTA DE CONVIDADOS
     // =================================================================
-    const carregarConvidados = async () => {
-        try {
-            const response = await fetch(`${backendUrl}/api/guests`);
-            if (!response.ok) {
-                throw new Error('Falha ao buscar lista de convidados.');
-            }
-            const guests = await response.json();
-
-            const guestListElement = document.getElementById('guest-list');
-            guestListElement.innerHTML = ''; // Limpa a lista para evitar duplicatas
-
-            // Filtra para pegar apenas os convidados que responderam "Sim"
-            const goingGuests = guests.filter(guest => guest.attendance === true);
-
-            if (goingGuests.length === 0) {
-                guestListElement.innerHTML = '<li>Seja o primeiro a confirmar!</li>';
-            } else {
-                // Cria um item <li> para cada convidado e o adiciona na tela
-                goingGuests.forEach(guest => {
-                    const listItem = document.createElement('li');
-                    listItem.textContent = guest.name;
-                    guestListElement.appendChild(listItem);
-                });
-            }
-        } catch (error) {
-            console.error('Erro ao carregar convidados:', error);
-            const guestListElement = document.getElementById('guest-list');
-            guestListElement.innerHTML = '<li>Não foi possível carregar a lista.</li>';
-        }
-    };
-
+    
 
     // =================================================================
     // 2. SEU CÓDIGO ORIGINAL: ANIMAÇÃO DAS FLORES (INTACTO)
@@ -103,8 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // *** A MELHORIA ESTÁ AQUI ***
                 // Chama a função para atualizar a lista de convidados na tela
                 // imediatamente após a confirmação ser enviada com sucesso.
-                carregarConvidados();
-
+                
             } else {
                 throw new Error(result.message || 'Ocorreu um erro.');
             }
@@ -119,5 +88,5 @@ document.addEventListener('DOMContentLoaded', () => {
     // 4. INICIALIZAÇÃO
     // =================================================================
     // Carrega a lista de convidados assim que a página é aberta.
-    carregarConvidados();
+    
 });

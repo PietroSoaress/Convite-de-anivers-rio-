@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin - Lista de Convidados</title>
+    <link rel="stylesheet" href="denize.css"> <!-- Reutiliza seu CSS! -->
+    <style> /* Estilos extras só para esta página */
+        body { background: #f0f0f0; }
+        .container { max-width: 800px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section id="admin-section">
+            <h2>Área Administrativa</h2>
+            <form id="password-form">
+                <div class="form-group">
+                    <label for="password">Digite a senha para ver a lista:</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit">Ver Lista</button>
+            </form>
+            <p id="admin-message"></p>
+        </section>
+
+        <section id="guest-list-section" style="display:none;">
+            <h2>Lista Completa de Convidados</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Vai Comparecer?</th>
+                    </tr>
+                </thead>
+                <tbody id="guest-list-body">
+                    <!-- Nomes aparecerão aqui -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
